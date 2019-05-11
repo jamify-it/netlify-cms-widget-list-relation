@@ -1,0 +1,38 @@
+backend:
+  name: test-repo
+  login: false
+
+media_folder: assets
+
+collections:
+  - name: settings
+    label: Settings
+    files:
+      - name: people
+        label: People
+        file: site/data/settings/people.yml
+        extension: yml
+        fields:
+          - name: authors
+            label: Authors
+            widget: list
+            fields:
+              - {name: name, label: Full name, widget: string}
+              - {name: email, label: Email, widget: string}
+  - name: projects
+    label: Projects
+    folder: site/content/projects
+    create: true
+    fields:
+      - {name: title, label: Project name, widget: string}
+      - name: authors
+        label: Authors
+        widget: list-relation
+        collection:
+          name: settings
+          file: people
+          field: authors
+        multiple: true
+        searchFields: [name, email]
+        valueField: email
+        displayField: name
