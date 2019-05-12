@@ -33,20 +33,7 @@ function getSelectedValue({value, options, isMultiple}) {
   }
 }
 
-export default class FileRelationControl extends React.Component {
-  didInitialSearch = false;
-
-  static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    forID: PropTypes.string.isRequired,
-    value: PropTypes.node,
-    field: ImmutablePropTypes.map,
-    fetchID: PropTypes.string,
-    classNameWrapper: PropTypes.string.isRequired,
-    setActiveStyle: PropTypes.func.isRequired,
-    setInactiveStyle: PropTypes.func.isRequired,
-  };
-
+class Control extends React.Component {
   shouldComponentUpdate(nextProps) {
     return (
       this.props.value !== nextProps.value ||
@@ -186,3 +173,16 @@ export default class FileRelationControl extends React.Component {
     );
   }
 }
+
+Control.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  forID: PropTypes.string.isRequired,
+  value: PropTypes.node,
+  field: ImmutablePropTypes.map,
+  fetchID: PropTypes.string,
+  classNameWrapper: PropTypes.string.isRequired,
+  setActiveStyle: PropTypes.func.isRequired,
+  setInactiveStyle: PropTypes.func.isRequired,
+};
+
+export default Control;
