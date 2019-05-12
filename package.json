@@ -10,7 +10,7 @@
     "relation",
     "collection"
   ],
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/jamify-it/netlify-cms-widget-list-relation",
   "repository": "jamify-it/netlify-cms-widget-list-relation",
   "license": "MIT",
