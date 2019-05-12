@@ -1,9 +1,9 @@
-import ListRelationControl from './Control'
-import ListRelationPreview from './Preview'
+import Control from './Control'
+import Preview from './Preview'
 
-if (typeof window !== 'undefined') {
-  window.ListRelationControl = ListRelationControl
-  window.ListRelationPreview = ListRelationPreview
-}
+const ListRelation = {
+  Control,
+  Preview,
+};
 
-export { ListRelationControl, ListRelationPreview }
+export default ListRelation;

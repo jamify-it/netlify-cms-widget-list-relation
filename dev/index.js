@@ -1,7 +1,7 @@
 import './bootstrap.js'
 import CMS, { init } from 'netlify-cms'
 import 'netlify-cms/dist/cms.css'
-import { ListRelationControl, ListRelationPreview } from '../src'
+import ListRelation from '../src'
 
 window.repoFiles = {
   site: {
@@ -20,6 +20,6 @@ window.repoFiles = {
   }
 };
 
-CMS.registerWidget('list-relation', ListRelationControl, ListRelationPreview)
+CMS.registerWidget('list-relation', ListRelation.Control, ListRelation.Preview);
 
 init();

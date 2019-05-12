@@ -17,9 +17,9 @@ npm install --save @jamify-it/netlify-cms-widget-list-relation
 ```
 
 ```js
-import { ListRelationControl, ListRelationPreview } from '@jamify-it/netlify-cms-widget-list-relation'
+import ListRelation from '@jamify-it/netlify-cms-widget-list-relation';
 
-CMS.registerWidget('list-relation', ListRelationControl, ListRelationPreview)
+CMS.registerWidget('list-relation', ListRelation.Control, ListRelation.Preview);
 ```
 
 ## How to use
