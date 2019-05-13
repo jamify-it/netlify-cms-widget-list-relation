@@ -41,7 +41,7 @@ class Control extends React.Component {
     );
   }
 
-  handleChange = (selectedOption) => {
+  handleChange(selectedOption) {
     const {onChange, field} = this.props;
     const displayField = field.get('displayField', 'name');
     let value;
@@ -68,9 +68,9 @@ class Control extends React.Component {
       };
       onChange(value[displayField], metadata);
     }
-  };
+  }
 
-  parseHitOptions = (hits) => {
+  parseHitOptions(hits) {
     const {field} = this.props;
     const valueField = field.get("valueField");
     const displayField = field.get("displayField") || field.get("valueField");
@@ -87,9 +87,9 @@ class Control extends React.Component {
           : hit[displayField],
       };
     });
-  };
+  }
 
-  processOptions = (term, field, options, callback) => {
+  processOptions(term, field, options, callback) {
     if (term) {
       const searchFields = field.get("searchFields");
       const searchFieldsArray = List.isList(searchFields) ? searchFields.toJS() : [searchFields];
@@ -116,7 +116,7 @@ class Control extends React.Component {
     callback(options);
   }
 
-  loadOptions = (term, callback) => {
+  loadOptions(term, callback) {
     const {loadEntry, field} = this.props;
 
     try {
